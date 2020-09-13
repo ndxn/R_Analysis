@@ -1,1 +1,45 @@
-Mecha Car Writeup
+MECHA CAR WRITE-UP
+
+
+MULTIPLE LINEAR REGRESSION ANALYSIS OF FUEL EFFICIENCY
+
+This analysis uses the MechaCar_mpg.csv file, which contains fifty observations, each with six variables. The fuel efficiency variable, represented in the script by $mpg, is considered the dependent value. The first step undertaken in the analysis was to create and correlate a matrix of the variable columns. See below:
+
+Fuel Efficiency Correlation Matrix 
+	                 vehicle_length vehicle_weight spoiler_angle ground_clearance         AWD         mpg	vehicle_length       1.00000000    -0.12271790    0.02577114      -0.31663112  0.08565668  0.60947984	vehicle_weight      -0.12271790     1.00000000   -0.11307851       0.08511338 -0.03698098  0.09068314	spoiler_angle        0.02577114    -0.11307851    1.00000000      -0.21112057 -0.09120266 -0.02083999	ground_clearance    -0.31663112     0.08511338   -0.21112057       1.00000000 -0.15214456  0.32874886	AWD                  0.08565668    -0.03698098   -0.09120266      -0.15214456  1.00000000 -0.14166977	mpg                  0.60947984     0.09068314   -0.02083999       0.32874886 -0.14166977  1.00000000
+
+As mpg is the dependent variable, that column is the only being considered. Most variables show some correlation, with the most promising correlatives being vehicle_length and ground_clearance, with positive correlation of approximately 0.609 and 0.328, respectively. It is assumed at this point that these two variables will be present in the multiple linear regression.
+
+The next step undertaken was running a multiple linear regression on all variables, again, with mpg as the dependent variable and the remaining five as independent. In this first run, the coefficients are:
+
+	(Intercept): 		-1.040e+02                           	vehicle_length: 	6.267e+00    
+	vehicle_weight;		1.245e-03
+	spoiler_angle:		6.877e-02	
+	ground_clearance:	3.546e+00
+	AWD:			-3.411e+00
+
+Using this as a multiple linear regression, the model could be expressed as:
+ 	mpg = -104 +  6.267(vehicle_length) + 0.001245(vehicle_weight) + 0.06877(spoiler_angle) + 3.546(ground_clearance) - 3.411(AWD)
+
+This data tells use that vehicle_weight and spoiler_angle have relatively low (i.e., slopes close to zero) correlation with fuel efficiency, whereas the remainder of the variables (Intercept excluded) all seem to have high correlation.
+
+An analysis of the p-values for each will provide the probability that the variables are actually correlated. The entire multiple linear regression was placed input the summarize() function. The p-values and significance are provide below:
+
+	                  Pr(>|t|)    	(Intercept)       5.08e-08 ***	vehicle_length    2.60e-12 ***	vehicle_weight    0.0776 .  	spoiler_angle     0.3069    	ground_clearance  5.21e-08 ***	AWD               0.1852    
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Here, it is evident that, of the variables, only for the variables for vehicle_length and ground_clearance is the p-value low enough to reject the null hypothesis that the effect is random. As such, we accept the alternate hypothesis for each that the variables of vehicle_length and ground_clearance to impact fuel efficiency.
+
+To develop a better multiple linear regression model, then, the same procedure will be run with only the variables that are significant. The coefficients are as follow:
+
+	(Intercept): 		-91.557                           	vehicle_length: 	6.081    	
+	ground_clearance:	3.567
+
+The summary analysis renders the following p-values, all of which are still significant: 
+
+	                  Pr(>|t|)    	(Intercept)       3.86e-08 ***	vehicle_length    7.68e-12 ***	ground_clearance  3.26e-08 ***	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+The resultant multiple linear regression model for this data, which may have some predictive power is, therefore:
+
+	mpg = -91.557 + 6.081(vehicle length) + 3.567(ground_clearance)
