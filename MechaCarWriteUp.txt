@@ -69,7 +69,7 @@ Being a new company, it is critical to know how brand recognition affects the sa
 In this study, the dependent variable would be sales, measured in units sold/year. 
 
 Independent variables with their metric and data type, to consider include:
-	vehicle make (nominal)
+	vehicle make (nominal) OR brand recognition (calculated score, continuous)
 	sales (units/year, interval)
 	price ($ or local equivalence, continuous)
 	reliability or maintenance cost estimates (currency/distance, continuous)
@@ -85,4 +85,8 @@ Independent variables with their metric and data type, to consider include:
 
 Because it has been several years since I've considered how to control for variables when considering the impact of nominal data, I continue, first with analyses that can be conducted on the continuous data.
 
-With the units sold per year as the dependent variable, it would be easy to run a multiple linear regression on the continuous data. The null hypothesis for each of those variables is that the independent variable does not have an impact on the dependent variable. Alternate hypotheses would be that the variables do impact the number of units sold per year. A t-test would help to provide
+With the units sold per year as the dependent variable, it would be easy to run a multiple linear regression on the continuous data. The null hypothesis for each of those variables is that the independent variable does not have an impact on the dependent variable. Alternate hypotheses would be that the variables do impact the number of units sold per year. A t-test would help to provide whether the impact of any variable is statistically significant.
+
+The next step would be to consider the vehicle make. It could be that the results of the regression analysis could be used in a chi-squared test against the vehicle make, which could then demonstrate how brand name influences sales when vehicle specifications are controlled for. In this case, the null hypothesis is that brand name does not impact sales figures but, as is anecdotally known, brand name and loyalty very much has an impact on sales. As such, with the appropriate analysis, researchers would find the relative impact of different brands.
+
+A follow-up would be to use the analysis to predict sales. MechaCar wants to perform well, so an assumption on the "power" of the brand would have to be made, perhaps by making an analogy to other brand with expected comparable recognition, would have to be made. Then, using necessary sales projects for project viability, vehicle specifications could be adjusted.
