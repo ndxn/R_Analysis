@@ -1,4 +1,4 @@
-vehicle length,vehicle weight,spoiler angle,ground clearance,AWD,mpg
+vehicle_length,vehicle_weight,spoiler_angle,ground_clearance,AWD,mpg
 14.69709536,6407.94647,48.78998258,14.64098303,1,49.04918045
 12.53420597,5182.080571,90,14.36667939,1,36.76606309
 20,8337.981208,78.63232282,12.25371141,0,80

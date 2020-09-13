@@ -43,3 +43,21 @@ The summary analysis renders the following p-values, all of which are still sign
 The resultant multiple linear regression model for this data, which may have some predictive power is, therefore:
 
 	mpg = -91.557 + 6.081(vehicle length) + 3.567(ground_clearance)
+
+
+SUMMARY STATISTICS MODEL AND T-TEST
+
+The pressure of the suspension coil is considered in this following analysis, where the idea mean, mu, is 1500psi. The first summary analysis was performed on the entire dataset while a second analysis was performed on the data grouped by Manufacturing Lot number. All data are presented in the following table, along with the p-value for the single set t-test, which should indicate if the sample is statistically similar:
+
+  	Manufacturing_Lot   Mean_PSI   Median_PSI   Variance   Standard_Deviation   p-value  	Entire Dataset      1499.531     1499.747   76.23459             8.731242    0.5117 	Lot1                1500.        1500.       1.15                1.07  	     0.9048 	Lot2                1500.        1499.      10.1                 3.18 	     0.3451 	Lot3                1499.        1498.     220.                 14.8         0.637
+
+The p-values for the whole sample and all Manufacturing Lots are all well about 0.05, meaning there is not sufficient evidence to reject the null hypothesis that there is no statistical difference between the observed sample and the presumed population mean. This means we can assume the samples are statistically similar. The design specifications for the MechaCar suspension coils dictate that the variance of the coils must not exceed 100psi. With a variance of approximately 76.235, the dataset as a whole, it would appear that the full sample would fit within that specification. However, drilling down, it is noted that Manufacturing Lot 3 has a variance of 220., which far exceeds the specifications. 
+
+Summary data for just Manufacturing Lots 1 and 2 is provided:
+
+  	Manufacturing_Lot   Mean_PSI   Median_PSI   Variance   Standard_Deviation   p-value	Lots 1 and 2        1499.795     1499.995   5.632336             2.373254.   0.3888
+
+The first two manufacturing lots fall within the design specification and the p-value of this single-set t-test, at 0.3888, is higher than 0.05, so the evidence to reject the null hypothesis is lacking and it is, thus, accepted that the Lots 1 and 2 sample is statistically similar.
+
+
+DESIGN YOUR OWN STUDY
