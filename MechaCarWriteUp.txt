@@ -1,4 +1,4 @@
-MECHA CAR WRITE-UP
+MECHA CAR ANALYSIS WRITE-UP AND FUTURE STUDY PROPOSAL
 
 
 MULTIPLE LINEAR REGRESSION ANALYSIS OF FUEL EFFICIENCY
@@ -61,3 +61,28 @@ The first two manufacturing lots fall within the design specification and the p-
 
 
 DESIGN YOUR OWN STUDY
+
+Understanding of one company's own produces is useful for a number of reasons including product testing and assessing risk, however, it is necessary, too, to consider where one company fits into a competitive market. As such, the newfound statistical skills will be used to design a study that compares the performance of the MechaCar prototype vehicle to industry comps. Specifically, this study will show how the MechaCar will outperform competition, meaning that the selected variable and expected outcomes should highlight MechaCar without skewing data or misleading.
+
+Being a new company, it is critical to know how brand recognition affects the sales of cars. This kind of knowledge would help designers, engineers, and price modelers understand how variables should be set in order to give MechaCar a competitive advantage. For example, MechaCar may have to price the inventory more aggressively or provide better specifications in order to compete with a company that attracts buyers based on brand alone. This analysis would have to be conducted on each of MechaCar's models, with comparisons against the rest of the comparable models (i.e., size, performance, or, more generally, class) produced by other manufacturers. This data can then be uses as a control for the brand name variable.
+
+In this study, the dependent variable would be sales, measured in units sold/year. 
+
+Independent variables with their metric and data type, to consider include:
+	vehicle make (nominal)
+	sales (units/year, interval)
+	price ($ or local equivalence, continuous)
+	reliability or maintenance cost estimates (currency/distance, continuous)
+	fuel efficiency (mpg or L/100km, continuous)
+	safety (score from independent agency, continuous)
+	engine displacement (L, continuous)
+	engine power output (hp, continuous)
+	engine torque (lb-ft, continuous)
+	cabin size (volume, continuous)
+	seats (count, interval)
+	various included features (dichotomous)
+	various options (dichotomous)
+
+Because it has been several years since I've considered how to control for variables when considering the impact of nominal data, I continue, first with analyses that can be conducted on the continuous data.
+
+With the units sold per year as the dependent variable, it would be easy to run a multiple linear regression on the continuous data. The null hypothesis for each of those variables is that the independent variable does not have an impact on the dependent variable. Alternate hypotheses would be that the variables do impact the number of units sold per year. A t-test would help to provide
